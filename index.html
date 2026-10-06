@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#171020">
+
+<title>Our Last Chapter 💜</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- =====================================================
+     🌐 FONT
+     Direct Google Fonts URL.
+     No folder required.
+     ===================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 💜 Floating hearts are created automatically by JS -->
+<div class="heart-container" id="heartContainer"></div>
+
+<!-- ✨ Floating sparkles are created automatically by JS -->
+<div class="sparkle-container" id="sparkleContainer"></div>
+
+
+<!-- =====================================================
+     🎵 BACKGROUND MUSIC
+     
+     DIRECT SOURCE — NO MUSIC FOLDER.
+     
+     Replace the URL below with your own direct MP3 URL.
+     ===================================================== -->
+
+<audio id="music" loop>
+    <source
+        src="WhatsApp Audio 2026-09-06 at 12.32.26.mpeg"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+<!-- 🎵 Music button -->
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">♫</button>
+
+
+<!-- =====================================================
+     💜 PAGE 1 — PUZZLE
+     ===================================================== -->
+
+<section class="page active" id="page1">
+
+<div class="intro-content">
+
+<p class="small-text">ONE LAST TIME</p>
+
+<!-- ✍️ Change title here -->
+<h1>
+    Our<br>
+    <span>Last Chapter.</span>
+</h1>
+
+
+<!-- ✍️ Change opening message here -->
+<p class="intro-line">
+    Before you enter our story...
+    <br>
+    there's one little thing
+    <br>
+    I want you to do.
+</p>
+
+
+<div class="puzzle-box" id="puzzleBox">
+
+<p class="game-label">A MEMORY</p>
+
+<h3>Put us back together.</h3>
+
+<p class="game-instruction">
+    There is a memory hidden here.
+    <br>
+    Complete the picture.
+</p>
+
+
+<!-- =====================================================
+     📸 PUZZLE PHOTO
+     
+     NO IMAGE IS PUT HERE.
+     
+     The actual photo is embedded directly in script.js.
+     ===================================================== -->
+
+<div class="puzzle" id="puzzle"></div>
+
+
+<div class="puzzle-progress">
+    <span id="puzzleProgress">0</span> /
+    <span id="puzzleTotal">9</span>
+</div>
+
+
+<p class="game-status" id="gameStatus">
+    Maybe our story needs a little fixing first...
+</p>
+
+</div>
+
+
+<!-- 💜 Puzzle completion message -->
+
+<div class="puzzle-complete" id="puzzleComplete">
+
+<div class="complete-heart">💜</div>
+
+<h3>There we are.</h3>
+
+<p>
+    The beginning of everything.
+    <br><br>
+    Funny how a picture can hold an entire chapter of our lives.
+</p>
+
+</div>
+
+
+<button
+    class="enter-btn locked"
+    id="enterBtn"
+    onclick="nextPage()"
+>
+    Take me back <span>→</span>
+</button>
+
+</div>
+
+
+<div class="scroll-text">
+    this story belongs to two people
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     💜 PAGE 2 — CHAPTER I
+     ===================================================== -->
+
+<section class="page" id="page2">
+
+<div class="page-inner">
+
+<p class="chapter">CHAPTER I</p>
+
+
+<h2>
+    Before everything
+    <br>
+    became
+    <i>complicated.</i>
+</h2>
+
+
+<!-- ✍️ YOUR STORY HERE -->
+
+<p class="story-text">
+    There was a time when it was just you and me.
+    No distance.
+    No silence.
+    No goodbyes.
+    Just two people who somehow found each other.
+</p>
+
+
+<!-- =====================================================
+     📸 CHAPTER I PHOTO
+     
+     DIRECT IMAGE URL — NO FOLDER.
+     
+     Replace the URL with your own direct image URL.
+     ===================================================== -->
+
+<div class="photo-card">
+
+<img
+    src="chapter 1 .jpeg"
+    alt="Our first memory"
+    onclick="openPhoto(this.src)"
+>
+
+
+<!-- ✍️ PHOTO CAPTION -->
+
+<div class="photo-caption">
+
+<span>01</span>
+
+<p>
+    This was one of those moments I never thought I'd have to miss someday.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     🕰️ TIMELINE
+     ===================================================== -->
+
+<div class="timeline">
+
+
+<!-- ✍️ DATE / MEMORY 1 -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<span>THE BEGINNING</span>
+
+<h3>The day everything started.</h3>
+
+<p>
+    Add your actual date and story here.
+</p>
+
+</div>
+
+
+<!-- ✍️ DATE / MEMORY 2 -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<span>THE FIRST MEMORY</span>
+
+<h3>Something I'll never forget.</h3>
+
+<p>
+    Write what happened that day.
+</p>
+
+</div>
+
+
+<!-- ✍️ DATE / MEMORY 3 -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<span>THE DAY WE KNEW</span>
+
+<h3>Somewhere along the way, it became us.</h3>
+
+<p>
+    Replace this with your actual memory.
+</p>
+
+</div>
+
+</div>
+
+
+<button class="next-btn" onclick="nextPage()">
+    Continue <span>→</span>
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     💜 PAGE 3 — CHAPTER II
+     ===================================================== -->
+
+<section class="page" id="page3">
+
+<div class="page-inner">
+
+<p class="chapter">CHAPTER II</p>
+
+<h2>
+    The moments
+    <br>
+    I will
+    <i>keep.</i>
+</h2>
+
+
+<p class="story-text">
+    Maybe we didn't get forever.
+    But we got moments that felt like forever.
+</p>
+
+
+<!-- =====================================================
+     📸 MEMORY PHOTO 1
+     DIRECT IMAGE URL
+     ===================================================== -->
+
+<div class="memory">
+
+<div class="memory-image">
+
+<img
+    src="sletrain.jpeg"
+    alt="Memory 1"
+    onclick="openPhoto(this.src)"
+>
+
+</div>
+
+<div class="memory-caption">
+
+<span>MEMORY 01</span>
+
+<h3>
+    A day I wish I could live again.
+</h3>
+
+<p>
+    Change this into something only the two of you understand.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     📸 MEMORY PHOTO 2
+     DIRECT IMAGE URL
+     ===================================================== -->
+
+<div class="memory reverse">
+
+<div class="memory-image">
+
+<img
+    src="cute21.jpeg"
+    alt="Memory 2"
+    onclick="openPhoto(this.src)"
+>
+
+</div>
+
+<div class="memory-caption">
+
+<span>MEMORY 02</span>
+
+<h3>
+    You made ordinary days special.
+</h3>
+
+<p>
+    Some memories don't need a reason.
+    They just stay.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     📸 MEMORY PHOTO 3
+     DIRECT IMAGE URL
+     ===================================================== -->
+
+<div class="memory">
+
+<div class="memory-image">
+
+<img
+    src="last 2.jpeg"
+    alt="Memory 3"
+    onclick="openPhoto(this.src)"
+>
+
+</div>
+
+<div class="memory-caption">
+
+<span>MEMORY 03</span>
+
+<h3>
+    And somehow, we were happy.
+</h3>
+
+<p>
+    This is where you can write your personal caption.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     🎥 VIDEO 1
+     
+     DIRECT VIDEO URL — NO FOLDER.
+     
+     Replace URL with your own direct MP4 URL.
+     ===================================================== -->
+
+<div class="video-section">
+
+<p class="video-label">
+    ONE MEMORY IN MOTION
+</p>
+
+<h3>
+    Some moments deserve to move.
+</h3>
+
+<video controls playsinline>
+
+<source
+    src="WhatsApp Video 2026-09-06 at 12.21.33.mp4"
+    type="video/mp4"
+>
+
+Your browser does not support video.
+
+</video>
+
+<p class="video-caption">
+    Add a small caption about this video.
+</p>
+
+</div>
+
+
+<!-- =====================================================
+     🎥 VIDEO 2
+     DIRECT VIDEO URL — NO FOLDER.
+     ===================================================== -->
+
+<div class="video-section">
+
+<p class="video-label">
+    ANOTHER MEMORY
+</p>
+
+<h3>
+    A moment that still feels alive.
+</h3>
+
+<video controls playsinline>
+
+<source
+    src="WhatsApp Video 2026-09-06 at 12.21.28.mp4"
+    type="video/mp4"
+>
+
+</video>
+
+<p class="video-caption">
+    Write what this moment means to you.
+</p>
+
+</div>
+
+
+<button class="next-btn" onclick="nextPage()">
+    There's more <span>→</span>
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     💜 PAGE 4
+     ===================================================== -->
+
+<section class="page" id="page4">
+
+<div class="page-inner letter-page">
+
+<p class="chapter">CHAPTER III</p>
+
+<h2>
+    Things I never
+    <br>
+    <i>said.</i>
+</h2>
+
+
+<!-- 💬 CHAT -->
+
+<div class="chat-memory">
+
+<p class="chat-title">
+    SOME WORDS I STILL REMEMBER
+</p>
+
+
+<div class="chat left">
+<span>You</span>
+<p>Do you remember this?</p>
+</div>
+
+
+<div class="chat right">
+<span>Her</span>
+<p>Of course I remember.</p>
+</div>
+
+
+<div class="chat left">
+<span>You</span>
+<p>
+    I wish we knew how important those little moments were.
+</p>
+</div>
+
+</div>
+
+
+
+<!-- 🔐 SECRET MESSAGE -->
+
+<div class="secret-box">
+
+<button onclick="revealSecret()" id="secretBtn">
+    💜 Open something I never showed you
+</button>
+
+<p id="secretMessage" class="secret-message">
+
+    Some things were easier to hide than to say.
+    <br><br>
+    I loved you more than I knew how to explain.
+
+</p>
+
+</div>
+
+
+<!-- 💌 LETTER -->
+
+<div class="letter">
+
+<p>Hey... My Madam ....</p>
+
+<p>
+    I don't really know how to begin this.
+</p>
+
+<p>
+    Maybe because there are some goodbyes that don't have a perfect beginning.
+</p>
+
+<p>
+    I could be angry.
+    I could blame you.
+    I could pretend that none of it mattered.
+</p>
+
+<p>
+    But the truth is...
+    it mattered more than I ever knew how to say.
+</p>
+
+<p>
+    You became a part of my everyday life.
+    Your messages.
+    Your voice.
+    Your little habits.
+    The things that probably meant nothing to you but somehow meant everything to me.
+</p>
+
+<p>
+    And maybe that's why this hurts.
+</p>
+
+<p>
+    Because I didn't lose just a relationship.
+    I lost the future I imagined with you.
+</p>
+
+<p>
+    I don't know what you'll remember about us.
+</p>
+
+<p>
+    Maybe the fights.
+    Maybe the ending.
+    Maybe the things that went wrong.
+</p>
+
+<p>
+    But I hope, somewhere in all of that, you remember that once, there was someone who genuinely loved you.
+</p>
+
+<p>
+    And that person was me.
+</p>
+
+<p>
+    I don't want to hold you anymore.
+</p>
+
+<p>
+    If leaving is what makes you happy, then I'll learn how to let you leave.
+    <p>I hope this isn't the full stop to our story... maybe someday, 
+    somehow, <i>we'll find a way to carry it further...... </i></p>
+</p>
+
+<p class="signature">
+    — Me
+</p>
+
+</div>
+
+
+<!-- 💭 REMEMBER -->
+
+<div class="remember-section">
+
+<h3>
+    What I'll remember.
+</h3>
+
+<div class="remember-grid">
+
+<div>
+<span>01</span>
+<p>Your laugh.</p>
+</div>
+
+<div>
+<span>02</span>
+<p>The little things.</p>
+</div>
+
+<div>
+<span>03</span>
+<p>The way you made me feel.</p>
+</div>
+
+<div>
+<span>04</span>
+<p>Us.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<button class="next-btn" onclick="nextPage()">
+    One last page <span>→</span>
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     💜 PAGE 5
+     ===================================================== -->
+
+<section class="page final-page" id="page5">
+
+<div class="final-content">
+
+<p class="chapter">
+    THE LAST CHAPTER
+</p>
+
+<h2>
+    Goodbye,
+    <br>
+    <i>my once.</i>
+</h2>
+
+
+<!-- =====================================================
+     📸 FINAL PHOTO
+     DIRECT SOURCE — NO FOLDER.
+     ===================================================== -->
+
+<div class="final-photo">
+
+<img
+    src="WhatsApp Image 2026-08-31 at 13.51.54.jpeg"
+    alt="Our final memory"
+    onclick="openPhoto(this.src)"
+>
+
+</div>
+
+
+<!-- 💌 FINAL MESSAGE -->
+
+<p class="final-message">
+
+    I wanted forever with you.
+    <br><br>
+
+    But sometimes loving someone means accepting that their forever isn't with you.
+    <br><br>
+
+    So I'm not going to ask you to stay.
+    <br><br>
+
+    I'm not going to ask you to come back.
+    <br><br>
+
+    I'm just going to say thank you.
+    <br><br>
+
+    Thank you for the memories.
+    Thank you for the smiles.
+    Thank you for being a part of my life.
+    <br><br>
+
+    And most importantly...
+    <br><br>
+
+    thank you for once making me believe in <i>us.</i>
+
+</p>
+
+
+<!-- =====================================================
+     📝 HER FINAL MESSAGE
+     ===================================================== -->
+
+<div class="her-message">
+
+<p class="chapter">
+    BEFORE YOU LEAVE
+</p>
+
+<h3>
+    I wrote my side of the story.
+</h3>
+
+<p>
+    Now I want to know one thing.
+</p>
+
+<p class="ask">
+    What would you write
+    <br>
+    on the last page of
+    <i>us?</i>
+</p>
+
+
+<textarea
+    id="herMessage"
+    placeholder="Write whatever you want me to remember..."
+    oninput="checkMessage()"
+></textarea>
+
+
+<div class="char-count">
+<span id="charCount">0</span>
+characters
+</div>
+
+
+<button
+    class="finish-btn"
+    id="finishBtn"
+    disabled
+    onclick="finishStory()"
+>
+    Write something first
+</button>
+
+</div>
+
+
+<!-- 💜 FINAL RESULT -->
+
+<div class="final-result" id="finalResult">
+
+<div class="final-heart">
+    💜
+</div>
+
+<h3>
+    I read it.
+</h3>
+
+<p>
+    Whatever happens after this,
+    I'll remember that you wrote
+    one last page for us.
+</p>
+
+<span>
+    Thank you for being my story.
+</span>
+
+<div class="goodbye">
+    Goodbye.
+</div>
+
+</div>
+
+
+<!-- ✍️ FINAL QUOTE -->
+
+<div class="final-line">
+
+<span>
+    Some stories don't end because they weren't beautiful.
+</span>
+
+<br>
+
+<strong>
+    They end because they were never meant to last forever.
+</strong>
+
+</div>
+
+
+<button class="restart-btn" onclick="restart()">
+    ↻ Start again
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     🖼️ PHOTO LIGHTBOX
+     No photo source required here.
+     ===================================================== -->
+
+<div
+    class="lightbox"
+    id="lightbox"
+    onclick="closePhoto()"
+>
+
+<button
+    class="close-lightbox"
+    onclick="closePhoto()"
+>
+    ×
+</button>
+
+<img
+    id="lightboxImage"
+    src=""
+    alt="Full memory"
+    onclick="event.stopPropagation()"
+>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
